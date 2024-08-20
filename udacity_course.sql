@@ -137,7 +137,8 @@ Write a query that finds the percentage of revenue that comes from poster paper 
 (Try to do this without using the total column.) Display the id and account_id fields also. 
 */
 
-SELECT id, account_id, (poster_amt_usd/(standard_amt_usd + gloss_amt_usd + poster_amt_usd))*100 AS percentage_poster_revenue
+SELECT id, account_id,
+       poster_amt_usd/(standard_amt_usd + gloss_amt_usd + poster_amt_usd)*100 AS post_percentage
 FROM orders
 LIMIT 10;
 
