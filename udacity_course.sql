@@ -89,9 +89,20 @@ Our condition will work without having to do any sorting of the data.
 
 
 ### WHERE 2 (=set conditions) *NON-NUMERIC*
--- The WHERE statement can also be used with non-numeric data. We can use the = and != operators here. You need to be sure to use single quotes (just be careful if you have quotes in the original text) with the text data, not double quotes.
+-- The WHERE statement can also be used with non-numeric data. We can use the = and != operators here. 
+You need to be sure to use single quotes (just be careful if you have quotes in the original text) with the text data, not double quotes.
+Note: Commonly when we are using WHERE with non-numeric data fields, we use the LIKE, NOT, or IN operators. 
 
-Commonly when we are using WHERE with non-numeric data fields, we use the LIKE, NOT, or IN operators. 
+/*
+Filter the accounts table to include the company name, website, and the primary point of contact (primary_poc) just for the Exxon Mobil company in the accounts table.
+*/
+SELECT name, website, primary_poc
+FROM accounts
+WHERE name = 'Exxon Mobil';
+
+
+
+
 
 
 
