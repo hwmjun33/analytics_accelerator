@@ -286,12 +286,11 @@ SELECT *
 FROM web_events
 WHERE 
 [X] channel IN ('organic', 'adwords'), 
-[X] occurred_at LIKE ('2016%')
+[X] occurred_at LIKE ('2016%')  -- WILDCARD % ONLY USED IN TEXT --
 ORDER BY occurred_at DESC;
 
 CORRECTION:
 SELECT *
 FROM web_events
-WHERE 
-channel IN ('organic', 'adwords') AND occurred_at BETWEEN '2016-01-01' AND '2017-01-01'
+WHERE channel IN ('organic', 'adwords') AND occurred_at BETWEEN '2016-01-01' AND '2017-01-01'
 ORDER BY occurred_at DESC;
