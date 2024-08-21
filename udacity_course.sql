@@ -176,5 +176,24 @@ FROM accounts
 WHERE name LIKE '%s';
 
 
+### IN
+-- The IN operator is useful for working with both numeric and text columns. This operator allows you to use an =, but for more than one item of that particular column. 
+-- We can check one, two or many column values for which we want to pull data, but all within the same query. 
+-- In the upcoming concepts, you will see the OR operator that would also allow us to perform these tasks, but the IN operator is a cleaner way to write these queries.
 
+/*
+Use the accounts table to find the account name, primary_poc, and sales_rep_id for Walmart, Target, and Nordstrom.
+*/
+
+SELECT name, primary_poc, sales_rep_id
+FROM accounts
+WHERE name IN ('Walmart', 'Target', 'Nordstrom');
+
+/*
+Use the web_events table to find all information regarding individuals who were contacted via the channel of organic or adwords.
+*/
+
+SELECT *
+FROM web_events
+WHERE channel IN ('organic', 'adwords');
 
