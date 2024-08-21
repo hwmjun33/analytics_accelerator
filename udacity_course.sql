@@ -179,7 +179,12 @@ WHERE name LIKE '%s';
 ### IN
 -- The IN operator is useful for working with both numeric and text columns. This operator allows you to use an =, but for more than one item of that particular column. 
 -- We can check one, two or many column values for which we want to pull data, but all within the same query. 
+-- Differences between '=' and 'IN': 
+    -- The '=' operator is used for exact equality comparison. It compares a column or expression to a single value.
+    -- The 'IN' operator allows you to specify multiple values in a WHERE clause. It's essentially a shorthand for multiple OR conditions.  
 -- In the upcoming concepts, you will see the OR operator that would also allow us to perform these tasks, but the IN operator is a cleaner way to write these queries.
+e.g. SELECT * FROM Orders WHERE Status = 'Shipped' OR Status = 'Delivered';
+     SELECT * FROM Orders WHERE Status IN ('Shipped', 'Delivered');
 
 /*
 Use the accounts table to find the account name, primary_poc, and sales_rep_id for Walmart, Target, and Nordstrom.
