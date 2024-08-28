@@ -132,3 +132,14 @@ REMARK:
 2) If joining more than 3 tables, start from the table that is mentioned first in the question (in this case, region).
 
 
+### INNER JOIN (MOST COMMON)
+Definition: Only return rows that appear in both tables. The inclusive part in the middle of a Venn Diagram. 
+
+*There are other ways to join our data depending on the question we are asking.
+### LEFT JOIN, RIGHT JOIN, FULL OUTER JOIN
+.
+### LEFT JOIN & RIGHT JOIN
+Refer to the lesson video here: https://learn.udacity.com/courses/ud198/lessons/61a9a6ad-3c2e-457a-ba5f-78d38d11b91a/concepts/c06af590-dcfc-40f9-a3f1-e929c2dcb8b9
+
+
+
