@@ -142,7 +142,3 @@ Definition: Only return rows that appear in both tables. The inclusive part in t
 Refer to the lesson video here: https://learn.udacity.com/courses/ud198/lessons/61a9a6ad-3c2e-457a-ba5f-78d38d11b91a/concepts/c06af590-dcfc-40f9-a3f1-e929c2dcb8b9
        Main Idea: They allow us to pull rows that might only exist in one of the two tables. This will introduce a new data type called NULL. 
 *Note: LEFT JOIN is used more commonly than RIGHT JOIN.
-
-
-
-
