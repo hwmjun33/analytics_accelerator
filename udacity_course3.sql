@@ -151,3 +151,7 @@ The above used a SUBQUERY, but you could use any method to find the two necessar
 */
 
 
+### GROUP BY
+-- The order of column names in your GORUP BY clause doesn't matter--the results will be the same regardless. 
+-- Any column that is not within an aggregation must show up in your GROUP BY statement.
+
