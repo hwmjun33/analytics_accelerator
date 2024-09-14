@@ -154,4 +154,53 @@ The above used a SUBQUERY, but you could use any method to find the two necessar
 ### GROUP BY
 -- The order of column names in your GORUP BY clause doesn't matter--the results will be the same regardless. 
 -- Any column that is not within an aggregation must show up in your GROUP BY statement.
+*See SQL Practice Group By Exercise on Google Doc
+
+  
+### DISTINCT
+-- DISTINCT is always used in SELECT statements, and it provides the unique rows for all columns written in the SELECT statement. 
+-- Therefore, you only use DISTINCT once in any particular SELECT statement.
+
+e.g.
+SELECT DISTINCT column1, column2, column3
+FROM table1;
+
+*This would return the unique (or DISTINCT) rows across all three columns.
+
+/* Practice 
+Q1. Use DISTINCT to test if there are any accounts associated with more than one region.
+*/
+My Attempt:
+SELECT a.name, COUNT(DISTINCT r.id) as region_count
+FROM sales_reps s
+JOIN region r
+ON r.id = s.region_id
+JOIN accounts a
+ON s.id = a.sales_rep_id
+GROUP BY a.name
+HAVING COUNT(DISTINCT r.id) > 1;
+
+/* 
+Q2. Have any sales reps worked on more than one account?
+*/
+My Attempt (X)
+SELECT s.name sales_reps, COUNT(DISTINCT a.id) account_count
+FROM accounts a
+JOIN sales_reps s
+ON s.id = a.sales_rep_id
+GROUP BY s.name;
+
+SOLUTION:
+SELECT s.id, s.name, COUNT(*) number_accounts
+FROM accounts a
+JOIN sales_reps s
+ON a.sales_rep_id = s.id
+GROUP BY s.id, s.name
+ORDER BY number_accounts;
+
+*This one is to check number of unique sales reps.
+SELECT DISTINCT id, name
+FROM sales_reps;
+
+
 
