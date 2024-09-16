@@ -203,4 +203,9 @@ SELECT DISTINCT id, name
 FROM sales_reps;
 
 
+### HAVING
+-- Any time you want to perform a WHERE function on an element of your query that was created by an aggregate, 
+-- you need to use HAVING instead.
+*Note: WHERE cannot filter on aggregate columns!
+
 
